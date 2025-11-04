@@ -1,4 +1,4 @@
-name: dependabot call
+name: Reusable Workflow
 
 on:
   workflow_call:
@@ -19,3 +19,8 @@ jobs:
         
       - name: Print message
         run: echo "${{ inputs.message }}"
+      
+      - name: Show workflow info
+        run: |
+          echo "Running reusable workflow"
+          echo "Message: ${{ inputs.message }}"
